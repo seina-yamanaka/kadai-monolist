@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Http\Controllers;
 use \App\Item;
 use App\Http\Controllers\Controller;
@@ -30,7 +30,6 @@ use App\Http\Controllers\Controller;
                 $items[] = $item;
             }
         }
-        
 
         return view('items.create', [
             'keyword' => $keyword,
@@ -38,7 +37,7 @@ use App\Http\Controllers\Controller;
         ]);
     }
     
-     public function show($id)
+    public function show($id)
     {
       $item = Item::find($id);
       $want_users = $item->want_users;
@@ -50,7 +49,5 @@ use App\Http\Controllers\Controller;
           'have_users' => $have_users,
       ]);
     }
+    
   }
-  
-  
-?>
